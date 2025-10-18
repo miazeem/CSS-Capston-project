@@ -28,6 +28,8 @@ body{
   color: #3f85f6;
 }
 
+
+
 .nav-button {
   display: none;
   background: none;
@@ -42,6 +44,14 @@ body{
   align-items: center;
   background-color: white;
   padding: 8px 24px;
+  
+}
+
+.header-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 .nav-items li {
@@ -201,7 +211,7 @@ h1 span {
 
 .skill-container{
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 10px;
 
   
@@ -241,4 +251,45 @@ h1 span {
 
 }
 
+.timeline-container{
+  position: relative;
+}
+
+.timeline-container::after{
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  width: 2px;
+  height: 100%;
+  background-color: rgb(28, 49, 235);
+}
+
+.timeline-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  height:700px;
+}
+
+.time-card{
+  width: auto;
+  height: 200px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: left;
+  line-height: 1.6rem;
+}
+
+.time-card-left{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.time-card-right{
+  display: flex;
+  align-self: center;
+}
 
