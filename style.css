@@ -1,108 +1,242 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Montserrat", sans-serif;
+/* common style */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  
+ 
 }
 
-.logo{
-    color: #3F85F6;
+body{
+   background-color: #F8FAFC;
 }
 
-.nav-button{
-display: none;
+#section{
+  margin: 0 40px;
+  
+}
+
+#hero-section{
+  margin: 0 10px;
+}
+
+
+/* Header */
+.logo {
+  color: #3f85f6;
+}
+
+.nav-button {
+  display: none;
   background: none;
   border: none;
-  cursor: pointer; 
+  cursor: pointer;
   font-size: 20px;
 }
 
-.nav-container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-    padding: 8px 24px;
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 8px 24px;
 }
 
-.nav-items li{
-  
-    list-style: none;
+.nav-items li {
+  list-style: none;
 }
 
-.nav-items a{
-    text-decoration: none;
-     color: black;
-     font-weight: 600;
-     font-size: .8rem;
+.nav-items a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.nav-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+
+/* Hero */
+
+
+
+.hero-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  background: linear-gradient(to right, #686bb6, #3b196e);
+  padding: 80px 100px;
+}
+
+.profile-image {
+  width: 400px;
+  height: auto;
+  border-radius: 50%;
+  border: 8px solid #6e5ea0;
+}
+
+.profile-image-container {
+  justify-self: center;
+}
+
+.hero-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
  
 }
 
-.nav-items{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 15px;
- 
-}
 
-.hero{
-    display: flex;
-    justify-content: space-between;
-    background: linear-gradient(to right,#686BB6,#3B196E);
-    height: auto;
-    padding: 100px;
-    
+.hero-message h1 {
+  font-size: 2.5rem;
+  color: white;
 }
-
-.profile-image{
-    width: 250px;
-    height: auto;
-    border-radius: 50%;
-    border: 8px solid #6E5EA0;
-}
-
-.message{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    gap: 2rem;
-}
-
 
 
 .btn {
-  padding:1rem;  
+  padding: 1rem;
   border-radius: 50px;
   margin: 5px;
   font-size: 1rem;
   border: 2px solid white;
 }
 
-.service{
-    color: white;
-    background:none;
+.btn-group a {
+  text-decoration: none;
 }
 
-.hire{
-    color: #3F85F6;
+.btn-service-color {
+  color: white;
+  background: none;
 }
 
-span{
-    color: #E4B139;
+.btn-hire-color {
+  color: #3f85f6;
 }
 
-.des{
-    color: white;
-    line-height: 2;
+span {
+  color: #e4b139;
+}
+
+.des {
+  color: white;
+  line-height: 2;
 }
 
 h1 span {
-  line-height: 1.3;
+  line-height: 1.6;
 }
 
-h1{
-    font-size: 2.5rem;
-    color: white;
+.hero-article{
+  color: white;
+  
 }
+
+/* about  */
+.sub-headings{
+  text-align: center;
+  margin: 30px 0;
+}
+
+.sub-headings::after{
+  content: '';
+  display: block;
+  width:100px;
+  height: 6px;
+  background: linear-gradient(to right, #686bb6, #3b196e);
+  margin: 5px auto 0 auto;
+  border-radius: 5px;
+
+}
+
+
+
+.about-me-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 50px;
+
+}
+
+.article p{
+  margin-bottom: 20px;
+  line-height: 2rem;
+}
+
+.card-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  place-content: center;
+}
+
+.about-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  width: 190px;
+  height: 200px;
+  background-color: #3C1B70;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  font-size: 1rem;
+ 
+}
+
+.about-card > p:first-child{
+  font-weight: 900;
+   font-size: 2rem;
+}
+
+.skill-container{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+
+  
+}
+
+.skill-card{
+  width: auto;
+  height: 200px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: left;
+}
+
+.skil-icon{
+  font-size: 3rem;
+  color: #3C1B70;
+  margin-bottom: 1rem;
+}
+
+.progress-bar{
+  position: relative;
+  width: 100%;
+  background-color: #9ba7b4;
+  height: 10px;
+  border-radius: 5px;
+}
+
+.progress-fill{
+  position: absolute;
+
+  background-color: #3C1B70;
+  height: 10px;
+  border-radius: 5px;
+
+}
+
 
